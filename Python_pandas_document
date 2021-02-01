@@ -1,0 +1,19 @@
+## COde for annotation
+
+fig, ax=plt.subplots()
+x=np.linspace(0,20,1000)
+y=np.random.random(1000)
+ax.plot(x,np.cos(x))
+ax.axis('equal')
+
+#for i in range(len(x)):
+    #xi="{:.1f}".format(x[i])
+    #yi="{:.1f}".format(y[i])
+    #s=str("P("+str(xi)+' ,'+str(yi)+ ")")
+    #ax.text(x[i]+0.08,y[i]+0.08,s)
+    
+ax.annotate('Local maximum',xy=(6.0,0.9),xytext=(12,4),
+            arrowprops=dict(facecolor='skyblue',shrink=0.01))
+
+ax.annotate('Local manimum',xy=(5*np.pi,-1),xytext=(2,-6),
+            arrowprops=dict(arrowstyle="->",connectionstyle="angle3,angleA=-90,angleB=0"))
